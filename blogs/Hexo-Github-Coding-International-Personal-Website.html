@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/aptx_apple_touch_icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/aptx_favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/aptx_favicon_16x16.png">
+  <link rel="mask-icon" href="/images/aptx_logo.svg" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="google-site-verification" content="5Xy6gV3t9ecbSPjGqAeehea0VaZimhKW85DCnmFUcrc">
+  <meta name="msvalidate.01" content="4E77359CF17D8054C8098E874669258E">
+  <meta name="baidu-site-verification" content="LeoLVlStCa">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  
+  <link rel="stylesheet" href="/lib/animate-css/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"jerrydeng.site","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false};
+  </script>
+
+  <meta name="description" content="This article mainly introduces the method of setting up personal website by Hexo + Github + Coding under Windows.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo + Github + Coding &#x3D; International Personal Website">
+<meta property="og:url" content="https://jerrydeng.site/blogs/Hexo-Github-Coding-International-Personal-Website.html">
+<meta property="og:site_name" content="AptX">
+<meta property="og:description" content="This article mainly introduces the method of setting up personal website by Hexo + Github + Coding under Windows.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfjdP.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrheiT.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrhnWF.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrhpRg.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfvIf.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/Frfzi8.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrhSJS.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfoGD.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfXZt.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/Frhuz4.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/Frf7xH.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfTRe.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrhPMj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/Frh9zQ.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfLqI.png">
+<meta property="og:image" content="https://s1.ax1x.com/2018/12/20/FrfbMd.png">
+<meta property="article:published_time" content="2018-10-20T15:33:30.000Z">
+<meta property="article:modified_time" content="2018-12-20T14:57:42.000Z">
+<meta property="article:author" content="Jerry Deng">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="Coding">
+<meta property="article:tag" content="Website">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/12/20/FrfjdP.png">
+
+<link rel="canonical" href="https://jerrydeng.site/blogs/Hexo-Github-Coding-International-Personal-Website.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Hexo + Github + Coding = International Personal Website | AptX</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128074579-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-128074579-1');
+      }
+    </script>
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?4ace6b0c0e8858665b9b12de083009d5";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <main class="main">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+        <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">AptX</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Jerry Deng's Personal Website</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Perface"><span class="nav-text">Perface</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-Profile"><span class="nav-text">Hexo Profile</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preparation"><span class="nav-text">Preparation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Git"><span class="nav-text">Install Git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Node-js"><span class="nav-text">Install Node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Install-Hexo"><span class="nav-text">Install Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Register-Github-and-Coding-account"><span class="nav-text">Register Github and Coding account</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configure-SSH"><span class="nav-text">Configure SSH</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Build-website-at-local"><span class="nav-text">Build website at local</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Push-website-to-remote-repository"><span class="nav-text">Push website to remote repository</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Optional-Configure-a-domain-name"><span class="nav-text">Optional: Configure a domain name</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Buy-a-domain-name"><span class="nav-text">Buy a domain name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configure-domain-name-resolution-DNS"><span class="nav-text">Configure domain name resolution (DNS)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Add-CNAME-file"><span class="nav-text">Add CNAME file</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Configure-Github-Pages-and-Coding-Pages"><span class="nav-text">Configure Github Pages and Coding Pages</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Finally-deploy-your-website"><span class="nav-text">Finally, deploy your website!</span></a></li></ol></li></ol></div>
+      </section>
+      <!--/noindex-->
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Jerry Deng"
+      src="/images/aptx_avatar.gif">
+  <p class="site-author-name" itemprop="name">Jerry Deng</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="mailto:AptX.DWJ@outlook.com" title="E-Mail → mailto:AptX.DWJ@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </section>
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </header>
+
+      
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  <a href="https://github.com/AptX395" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
+
+<noscript>
+  <div id="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+      <div class="main-inner">
+        
+
+        <div class="content post posts-expand">
+          
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://jerrydeng.site/blogs/Hexo-Github-Coding-International-Personal-Website.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/aptx_avatar.gif">
+      <meta itemprop="name" content="Jerry Deng">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="AptX">
+    </span>
+
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo + Github + Coding = International Personal Website
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2018-10-20 23:33:30" itemprop="dateCreated datePublished" datetime="2018-10-20T23:33:30+08:00">2018-10-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2018-12-20 22:57:42" itemprop="dateModified" datetime="2018-12-20T22:57:42+08:00">2018-12-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Tutorial/" itemprop="url" rel="index"><span itemprop="name">Tutorial</span></a>
+                </span>
+            </span>
+
+          
+            <div class="post-description">This article mainly introduces the method of setting up personal website by Hexo + Github + Coding under Windows.</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Perface"><a href="#Perface" class="headerlink" title="Perface"></a>Perface</h2><p>Why use both platforms at the same time?</p>
+<p>Because Github is a foreign platforms, it’s unstable sometimes. And Coding is a domestic platform, whitch is stable and fast.</p>
+<p>Use both of them could make your website stable and fast.</p>
+<h2 id="Hexo-Profile"><a href="#Hexo-Profile" class="headerlink" title="Hexo Profile"></a>Hexo Profile</h2><p><a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> is an open source blog framework. It’s popular, lightweight and easy to use. It is based on Node.js and  generates static web pages. So it’s quickly to visit your website. And Hexo support writing with Markdown.</p>
+<h2 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h2><p>You could skip following steps if you already have done.</p>
+<h3 id="Install-Git"><a href="#Install-Git" class="headerlink" title="Install Git"></a>Install Git</h3><p>Download <a target="_blank" rel="noopener" href="https://git-scm.com/">Git</a> and install it. Run <code>git --version</code> with terminal to test whether Git has been installed successfully.</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrfjdP.png" alt="Git_version"></p>
+<h3 id="Install-Node-js"><a href="#Install-Node-js" class="headerlink" title="Install Node.js"></a>Install Node.js</h3><p>Download <a target="_blank" rel="noopener" href="https://nodejs.org/">Node.js</a> and install it. Run <code>node -v</code> with terminal to test whether Node.js has been installed successfully.</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrheiT.png" alt="Nodejs_version"></p>
+<blockquote>
+<p>PS: When you install Node.js, you will also install npm. It’s necessary to install Hexo.</p>
+</blockquote>
+<p>Run <code>npm -v</code> with terminal to test whether npm has been installed successfully.</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrhnWF.png" alt="npm_version"></p>
+<blockquote>
+<p>npm is the package manager for JavaScript and the world’s largest software registry.</p>
+</blockquote>
+<h3 id="Install-Hexo"><a href="#Install-Hexo" class="headerlink" title="Install Hexo"></a>Install Hexo</h3><p>Run <code>npm install hexo-cli -g</code> with termianl to install Hexo globally. Run <code>hexo -v</code> to test whether Hexo has been installed successfully.</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrhpRg.png" alt="Hexo_version"></p>
+<h3 id="Register-Github-and-Coding-account"><a href="#Register-Github-and-Coding-account" class="headerlink" title="Register Github and Coding account"></a>Register Github and Coding account</h3><p>Visit <a target="_blank" rel="noopener" href="https://github.com/">Github</a> and <a target="_blank" rel="noopener" href="https://coding.net/">Coding</a> to register your accounts. You’d better sign up with the same email address. (It’s useful for later steps)</p>
+<blockquote>
+<p>PS: Because of Coding has cooperated with Tencent Cloud, you could directly register an account at <a target="_blank" rel="noopener" href="https://dev.tencent.com/">Tencent Cloud Developer Platform</a> for more benefits.</p>
+</blockquote>
+<h3 id="Configure-SSH"><a href="#Configure-SSH" class="headerlink" title="Configure SSH"></a>Configure SSH</h3><ol>
+<li><p>Run <code>git config --global user.email &quot;your_email_address&quot;</code> with terminal to set user email.</p>
+<blockquote>
+<p>PS: <code>your_email_address</code> needs to be replaced by your email address which you used to sign up your Github and Coding accounts.</p>
+</blockquote>
+</li>
+<li><p>Run <code>ssh-keygen -t rsa -b 4096 -C &quot;your_email_address&quot;</code> with terminal and press <code>Enter</code> three times in a row to generate SSH key by default.</p>
+</li>
+<li><p>Open <code>C:/Users/your_user_name/.ssh/id_rsa.pub</code> , copy it’s all contents.</p>
+<p> Then visit <a target="_blank" rel="noopener" href="https://github.com/settings/keys">here</a> , sign in your Github account, click <code>New SSH Key</code> and paste your SSH key, save it.</p>
+<p> Visit <a target="_blank" rel="noopener" href="https://dev.tencent.com/user/account/setting/keys">here</a> to create a new SSH key for your Coding account by the same way.</p>
+</li>
+<li><p>Run <code>ssh -T git@github.com</code> and <code>ss -T git@git.coding.net</code> with terminal to test whether your SSH key has been configured successfully.</p>
+<p> <img src="https://s1.ax1x.com/2018/12/20/FrfvIf.png" alt="Github_SSH_test"></p>
+<p> <img src="https://s1.ax1x.com/2018/12/20/Frfzi8.png" alt="Coding_SSH_test"></p>
+</li>
+</ol>
+<h2 id="Build-website-at-local"><a href="#Build-website-at-local" class="headerlink" title="Build website at local"></a>Build website at local</h2><ol>
+<li><p>Select or create the directory where you want to build a website.</p>
+<blockquote>
+<p>PS: I’ll call it <code>your_website/</code> here.</p>
+</blockquote>
+</li>
+<li><p>Open terminal under <code>your_website/</code> .</p>
+</li>
+<li><p>Run <code>hexo init</code> to initialize a website.</p>
+</li>
+<li><p>Run <code>hexo new &quot;my_first_post&quot;</code> to generate a new post.</p>
+<blockquote>
+<p>PS: <code>my_first_post</code> is the name of post, you could replace it with another name.</p>
+</blockquote>
+<p> Then you could find the post file at <code>your_website/source/_posts/</code> .</p>
+<p> This directory saves all of your post files.</p>
+<p> If you want, you could edit your post file first. Learn Markdown at <a target="_blank" rel="noopener" href="https://www.markdown.cn/">Markdown Tutorial</a> .</p>
+<blockquote>
+<p>Markdown is a lightweight “Markup Language”, which has many advantages and is now widely used by writers who are more and more writing enthusiasts.</p>
+<p>See here please do not be confused by “Mark”, “Language”, Markdown syntax is very simple.</p>
+<p>There are no more than 10 commonly used marker symbols, and once you get familiar with this grammar rule, it will work once and for all.</p>
+</blockquote>
+</li>
+<li><p>Run <code>hexo g</code> or <code>hexo generate</code> to generate website.</p>
+</li>
+<li><p>Run <code>hexo s</code> or <code>hexo server</code> to run website at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> .</p>
+<p> Open browser and visit <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a> to preview the effect of your website.</p>
+<p> <img src="https://s1.ax1x.com/2018/12/20/FrhSJS.png" alt="hexo_g"></p>
+</li>
+</ol>
+<h2 id="Push-website-to-remote-repository"><a href="#Push-website-to-remote-repository" class="headerlink" title="Push website to remote repository"></a>Push website to remote repository</h2><ol>
+<li><p>Create a new repository on <a target="_blank" rel="noopener" href="https://github.com/">Github</a> , named <code>your_Github_account_name.github.io</code> .</p>
+<p> Then create a new repository on <a target="_blank" rel="noopener" href="https://coding.net/">Coding</a> , named <code>your_Coding_account_name.coding.me</code> .</p>
+<blockquote>
+<p>PS: <code>your_Github_account_name</code> and <code>your_Coding_account_name</code>  needs to be replaced by your Github account name and Coding account name.</p>
+</blockquote>
+</li>
+<li><p>Open <code>your_website/_config.yml</code> , find following codes:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">  <span class="attr">branch:</span></span><br></pre></td></tr></table></figure>
+<p> Add your repository SSH link at Github and Coding behind <code>repo: </code> as following:</p>
+ <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span></span><br><span class="line">    <span class="attr">Github:</span> <span class="string">your_Github_repository_SSH_link,master</span></span><br><span class="line">    <span class="attr">Coding:</span> <span class="string">your_Coding_repository_SSH_link,master</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>PS: <code>your_Github_repository_SSH_link</code> and <code>your_Coding_reporitory_SSH_linl</code> need to be replaced by your Github and Coding repository SSH link.</p>
+</blockquote>
+</li>
+<li><p>Run <code>hexo d</code> or <code>hexo deploy</code> to deploy website at <a target="_blank" rel="noopener" href="https://your_github_account_name.github.io/">https://your_Github_account_name.github.io</a> and <a target="_blank" rel="noopener" href="https://your_coding_acconut_name.coding.me/">https://your_Coding_acconut_name.coding.me</a> at the same time.</p>
+<blockquote>
+<p>PS: Here, you could already access your website via <a target="_blank" rel="noopener" href="https://your_github_account_name.github.io/">https://your_Github_account_name.github.io</a> .</p>
+</blockquote>
+</li>
+<li><p>Open the Coding Pages Service<br> Visit <a target="_blank" rel="noopener" href="https://coding.net/">Coding</a> , open the repository that you created in the previous step (the repository named <code>your_Coding_account_name.coding.me</code> ), click <code>Settings</code> , scroll down and find <code>Coding Pages</code> and start it.</p>
+<p> <img src="https://s1.ax1x.com/2018/12/20/FrfoGD.png" alt="Coding_pages"></p>
+<blockquote>
+<p>PS: Here, you could already access your website via <a target="_blank" rel="noopener" href="https://your_coding_account_name.coding.me/">https://your_Coding_account_name.coding.me</a> .</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Optional-Configure-a-domain-name"><a href="#Optional-Configure-a-domain-name" class="headerlink" title="Optional: Configure a domain name"></a>Optional: Configure a domain name</h2><p>Why configure a domain name?</p>
+<p>On the one hand, people could accese your website through your personalize domain name, instead of the complex domain name in the previous steps.</p>
+<p>On the other hand, visiting Github in China can be erratic at times. It’s better to visiting Coding in China instead.</p>
+<h3 id="Buy-a-domain-name"><a href="#Buy-a-domain-name" class="headerlink" title="Buy a domain name"></a>Buy a domain name</h3><p>You could buy a domain name on so many websites, such as <a target="_blank" rel="noopener" href="https://aliyun.com/">Ali Cloud</a> , <a target="_blank" rel="noopener" href="https://cloud.tencent.com/">Tencent Cloud</a> , and <a target="_blank" rel="noopener" href="https://sg.godaddy.com/">Godaddy</a> .</p>
+<p>Here I’ll show you how to buy a domain name on <a target="_blank" rel="noopener" href="https://aliyun.com/">Ali Cloud</a> .</p>
+<p>Visit <a target="_blank" rel="noopener" href="https://wanwang.aliyun.com/?spm=5176.8142029.388261.1093.e9396d3eApgn7X">here</a> and find a domain name that you like. Then follow the website’s guide to pay for the domain name.</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrfXZt.png" alt="Domain_name"></p>
+<h3 id="Configure-domain-name-resolution-DNS"><a href="#Configure-domain-name-resolution-DNS" class="headerlink" title="Configure domain name resolution (DNS)"></a>Configure domain name resolution (DNS)</h3><p>Visit <a target="_blank" rel="noopener" href="https://dc.console.aliyun.com/next/index?spm=5176.2020520001.aliyun_sidebar.aliyun_sidebar_domain.68814bd3JBBg4c#/domain/list/all-domain">here</a> , and sign in your Ali Cloud account.</p>
+<p>Then click <code>解析</code> .</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/Frhuz4.png" alt="解析"></p>
+<p>Click <code>添加记录</code> and add two CNAME records like this:</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/Frf7xH.png" alt="CNAME"></p>
+<h3 id="Add-CNAME-file"><a href="#Add-CNAME-file" class="headerlink" title="Add CNAME file"></a>Add CNAME file</h3><p>Create a file named <code>CNAME</code> (<strong>note: no suffix</strong>) under <code>your_website/source/</code> .</p>
+<p>Then open the file named <code>CNAME</code> , fill in <strong>your domain name</strong> like this:</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrfTRe.png" alt="CNAME_file"></p>
+<h3 id="Configure-Github-Pages-and-Coding-Pages"><a href="#Configure-Github-Pages-and-Coding-Pages" class="headerlink" title="Configure Github Pages and Coding Pages"></a>Configure Github Pages and Coding Pages</h3><p>Visit the Github repository of your website, and click <code>Settings</code> . Then scroll down and find <code>Github Pages</code> . Fill in <strong>your domain name</strong> like this:</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrhPMj.png" alt="Github_settings"></p>
+<p><img src="https://s1.ax1x.com/2018/12/20/Frh9zQ.png" alt="Github_pages"></p>
+<p>Visit the Coding repository of your website, click <code>Settings</code> , scroll down and find <code>Coding Pages</code> .</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrfLqI.png" alt="Coding_pages_settings"></p>
+<p>Fill in <strong>your domain name</strong> like this:</p>
+<p><img src="https://s1.ax1x.com/2018/12/20/FrfbMd.png" alt="Coding_custom_domain"></p>
+<h3 id="Finally-deploy-your-website"><a href="#Finally-deploy-your-website" class="headerlink" title="Finally, deploy your website!"></a>Finally, deploy your website!</h3><p>Run <code>hexo clean</code> , <code>hexo g</code> and <code>hexo d</code> with the terminal.</p>
+<hr>
+<p>Above, your international website is built successfully!</p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Github/" rel="tag"><i class="fa fa-tag"></i> Github</a>
+              <a href="/tags/Coding/" rel="tag"><i class="fa fa-tag"></i> Coding</a>
+              <a href="/tags/Website/" rel="tag"><i class="fa fa-tag"></i> Website</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/blogs/%E7%94%A8-VS-%E5%88%9B%E5%BB%BA-DLL-%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E5%9D%91-C.html" rel="next" title="用 VS 创建 DLL 的方法和坑 (C++)">
+      用 VS 创建 DLL 的方法和坑 (C++) <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+        </div>
+        
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jerry Deng</span>
+</div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
